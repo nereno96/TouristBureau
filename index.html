@@ -1,21 +1,98 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tourist Bureau</title>
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  </head>
-  <body>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Tourist Bureau</title>
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+    <body>
     <header>
-        <h1>Tourist Bureau</h1>
-    </header>
-    <main>
-        <div class="container">
+        <nav class="navbar navbar-expand-lg" style="background-color: #62929e;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Tourist Bureau</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="activities.html">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Disabled</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- <div class="container-fluid">
             <div class="row">
-                <div class="col-4">
+                <div class="col text-center" style="background-color: #c6c5b9;">
+                    <h1>Tourist Bureau</h1>
+                </div>
+            </div>
+        </div> -->
+    </header>
+    <main style="background-color: #c6c5b9;">
+        <div class="container">
+            <!-- <div class="row"  style="background-image: url('images/randomCity.jpeg'); height: 400px; width: 700px; justify-self: center;">
+                <div class="col text-center">
+                </div>
+                <div class="col text-center">
+                    <p>Welcome to Tourist Bureau!!!</p>
+                    <p>Adventure Awaits!</p>
+                </div>
+                <div class="col text-center">
+                    <p ></p>
+                </div>
+            </div> -->
+            <div id="carouselControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/randomCity.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/taboga.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/panamaNight.jpeg" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                </div>
+                <div class="col-10">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac turpis egestas sed tempus urna et pharetra pharetra massa. Tincidunt praesent semper feugiat nibh. Pharetra pharetra massa massa ultricies mi quis hendrerit. Commodo nulla facilisi nullam vehicula ipsum a arcu cursus vitae. Blandit cursus risus at ultrices. A diam maecenas sed enim ut sem. At risus viverra adipiscing at. Proin gravida hendrerit lectus a. Ut aliquam purus sit amet luctus venenatis lectus magna.</p>
 
+                    <!-- <img src="images/tourismPicTower.webp" height="auto"> -->
+
+                    <p>Id cursus metus aliquam eleifend mi in nulla. Leo in vitae turpis massa sed elementum tempus egestas sed. Lobortis feugiat vivamus at augue eget arcu dictum. Faucibus ornare suspendisse sed nisi lacus sed viverra. Mattis vulputate enim nulla aliquet porttitor. Scelerisque purus semper eget duis at tellus at urna. Fringilla est ullamcorper eget nulla facilisi etiam. Convallis tellus id interdum velit. Tortor posuere ac ut consequat semper viverra nam. Nisi lacus sed viverra tellus in hac habitasse platea dictumst. Risus pretium quam vulputate dignissim suspendisse in.</p>
+                        
+                    <p>Urna cursus eget nunc scelerisque viverra mauris in aliquam. Habitant morbi tristique senectus et netus et malesuada fames ac. Neque egestas congue quisque egestas diam in. Posuere urna nec tincidunt praesent semper. Quam id leo in vitae. Ut tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Blandit cursus risus at ultrices mi tempus imperdiet nulla malesuada. Libero id faucibus nisl tincidunt eget nullam non nisi. Placerat orci nulla pellentesque dignissim enim sit amet venenatis urna. At lectus urna duis convallis convallis tellus id interdum. Massa tincidunt nunc pulvinar sapien et. Tempus imperdiet nulla malesuada pellentesque. Et netus et malesuada fames ac turpis egestas.</p>
+                        
+                    <p>Blandit turpis cursus in hac habitasse platea dictumst quisque sagittis. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt. Nunc faucibus a pellentesque sit. Non pulvinar neque laoreet suspendisse. Tincidunt nunc pulvinar sapien et. Quis auctor elit sed vulputate. Scelerisque felis imperdiet proin fermentum leo vel orci. Facilisi cras fermentum odio eu feugiat pretium nibh. Velit dignissim sodales ut eu sem integer vitae justo eget. Ullamcorper eget nulla facilisi etiam dignissim.</p>
+                        
+                    <p>Viverra vitae congue eu consequat ac felis donec. Quis risus sed vulputate odio. Vitae et leo duis ut diam quam. Dictum non consectetur a erat nam at lectus urna. Quis ipsum suspendisse ultrices gravida dictum fusce ut placerat orci. Mauris cursus mattis molestie a iaculis at erat. Faucibus in ornare quam viverra orci sagittis eu volutpat odio. Augue neque gravida in fermentum et sollicitudin. Praesent elementum facilisis leo vel fringilla. Rhoncus mattis rhoncus urna neque viverra justo nec ultrices dui. Egestas dui id ornare arcu odio ut sem nulla. Et sollicitudin ac orci phasellus egestas tellus rutrum tellus pellentesque.</p>
+                </div>
+                <div class="col text-center">
+                    <p ></p>
                 </div>
             </div>
         </div>

@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Activities</title>
+        <link href="css/styles.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    </head>
+    <body style="background-color: #c6c5b9;">
+    <header>
+        <nav class="navbar navbar-expand-lg" style="background-color: #62929e;">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Tourist Bureau</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="activities.html">Activities</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link">Disabled</a>
+                    </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main style="background-color: #c6c5b9;">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <select class="form-select" aria-label="categories" id="categoriesList" name="categories">
+
+                    </select>
+                    <select class="form-select" aria-label="activities" name="activities" id="activitiesList">
+
+                    </select>
+                    <p id="activityInfo"></p>
+                    <div id="purchaseTicketsForm">
+                        <p>Number of Tickets: <input type="text" id="ticketField" /></p>
+                        <p>Credit Card Number: <input type="text" id="cardNumberField" /></p>
+                        <p>Email Address: <input type="email" id="emailField" /></p>
+                        <p><input type="submit" id="purchaseBtn" value="Purchase"></p>
+                        <p><input type="button" id="resetBtn" value="Reset"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="scripts/activities.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  </body>
+</html>
