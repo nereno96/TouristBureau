@@ -114,11 +114,12 @@ activitiesList.style.display = "none"
 
 window.onload = function () {
     initCategoriesList();
-    categoriesList.onchange = initActivitiesList;
+    categoriesList.onchange = initActivitiesList; 
     activitiesList.onchange = initInfo;
-    purchaseTicketsForm.style.display = "none";
+    purchaseTicketsForm.style.display = "none"; // hides form when page loads
 }
 
+// adds values to categories list onload
 function initCategoriesList() {
     for (let value of categories) {
         let option = new Option(value, value);
@@ -126,28 +127,29 @@ function initCategoriesList() {
     }
 }
 
+// adds values to activities list based on their category
 function initActivitiesList() {
     if (categoriesList.value == "select"){
-        activityInfo.innerHTML = "";
-        purchaseTicketsForm.style.display = "none";
+        activityInfo.innerHTML = ""; // clears paragraph holding activity info when the value of categories list has changed
+        purchaseTicketsForm.style.display = "none"; // hides form when value of categories list has changed
     }
     activitiesList.length = 0; // clears whatever list may be there already
     if (categoriesList.value == "select") {
-        activitiesList.style.display = "none"; // hides activities list if it is selected
+        activitiesList.style.display = "none"; // hides activities list if "select one" is selected
     }
     else if (categoriesList.value == "Adventures") {
-        let chooseActivity = new Option("Select one", "select");
-        activitiesList.appendChild(chooseActivity);
+        let chooseActivity = new Option("Select one", "select"); // adds "select one" option to the list of activities (consider writing one of these statements at the top of the function because it is repeated in every contidional) 
+        activitiesList.appendChild(chooseActivity); 
         activitiesList.style.display = "block"; // displays activities list
         for (let value of activities) {
             if (value.category == "Adventures") {
-                let option = new Option(value.name, value.id);
+                let option = new Option(value.name, value.id); 
                 activitiesList.appendChild(option);
             }
         }
     }
     else if (categoriesList.value == "Arts & Crafts") {
-        let chooseActivity = new Option("Select one", "select");
+        let chooseActivity = new Option("Select one", "select"); // adds "select one" option to the list of activities (consider writing one of these statements at the top of the function because it is repeated in every contidional) 
         activitiesList.appendChild(chooseActivity);
         activitiesList.style.display = "block"; // displays activities list
         for (let value of activities) {
@@ -158,7 +160,7 @@ function initActivitiesList() {
         }
     }
     else if (categoriesList.value == "Museums") {
-        let chooseActivity = new Option("Select one", "select");
+        let chooseActivity = new Option("Select one", "select"); // adds "select one" option to the list of activities (consider writing one of these statements at the top of the function because it is repeated in every contidional) 
         activitiesList.appendChild(chooseActivity);
         activitiesList.style.display = "block"; // displays activities list
         for (let value of activities) {
@@ -169,7 +171,7 @@ function initActivitiesList() {
         }
     }
     else if (categoriesList.value == "Wine Tastings") {
-        let chooseActivity = new Option("Select one", "select");
+        let chooseActivity = new Option("Select one", "select"); // adds "select one" option to the list of activities (consider writing one of these statements at the top of the function because it is repeated in every contidional) 
         activitiesList.appendChild(chooseActivity);
         activitiesList.style.display = "block"; // displays activities list
         for (let value of activities) {
@@ -180,7 +182,7 @@ function initActivitiesList() {
         }
     }
     else if (categoriesList.value == "Other") {
-        let chooseActivity = new Option("Select one", "select");
+        let chooseActivity = new Option("Select one", "select"); // adds "select one" option to the list of activities (consider writing one of these statements at the top of the function because it is repeated in every contidional) 
         activitiesList.appendChild(chooseActivity);
         activitiesList.style.display = "block";
         for (let value of activities) {
