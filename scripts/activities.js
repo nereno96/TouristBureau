@@ -105,6 +105,8 @@ let activities = [
 const categoriesList = document.getElementById("categoriesList");
 const activitiesList = document.getElementById("activitiesList");
 const purchaseTicketsForm = document.getElementById("purchaseTicketsForm");
+const purchaseBtn = document.getElementById("purchaseBtn");
+const resetBtn = document.getElementById("resetBtn");
 // creates select one option and adds it to category list
 let chooseCategory = new Option("Select one", "select");
 categoriesList.appendChild(chooseCategory);
@@ -117,6 +119,8 @@ window.onload = function () {
     categoriesList.onchange = initActivitiesList; 
     activitiesList.onchange = initInfo;
     purchaseTicketsForm.style.display = "none"; // hides form when page loads
+    purchaseBtn.onclick = purchaseBtnClicked;
+    resetBtn.onclick = resetBtnClicked;
 }
 
 // adds values to categories list onload
@@ -197,8 +201,8 @@ function initActivitiesList() {
 function initInfo () {
     console.log("initInfo")
     let activityInfo = document.getElementById("activityInfo");
-    for (let value of activities) {
-        if (value.id == activitiesList.value) {
+    for (let value of activities) { // goes through elements in activities object
+        if (value.id == activitiesList.value) { // matches id of activity with the value of whatever the selected activity is
             activityInfo.innerHTML = "Activity Id: " + value.id + "<br /> Activity Name: " + value.name + "<br /> Activity Description: " + value.description + "<br /> Activity Location: " + value.location + "<br /> Activity Price: $" + value.price.toFixed(2);
         }
         else if (activitiesList.value == "select" || categoriesList.value == "select") {
@@ -214,3 +218,19 @@ function initInfo () {
     }
 }
 
+function purchaseBtnClicked() {
+    let purchaseMessage = document.getElementById("purchaseMessage");
+    let numTickets = document.getElementById("ticketField").value;
+    let email = document.getElementById("emailField").value;
+    for (let value of activities) {
+        if (value.id == activitiesList.value){
+            purchaseMessage.innerHTML = "Your credit card has been charged $" + (value.price * numTickets).toFixed(2) + " for " + numTickets + " tickets to " + value.name + ". A confirmation email has been sent to " + email + ".";
+        }
+    }
+    return false;
+}
+
+function resetBtnClicked() {
+    categoriesList.value = "select";
+    initActivitiesList();
+}
