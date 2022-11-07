@@ -218,9 +218,9 @@ function initInfo () {
     }
 }
 
-function purchaseBtnClicked() {
+function purchaseBtnClicked() {  
     let purchaseMessage = document.getElementById("purchaseMessage");
-    let numTickets = document.getElementById("ticketField").value;
+    let numTickets = Number(document.getElementById("ticketField").value);
     let email = document.getElementById("emailField").value;
     for (let value of activities) {
         if (value.id == activitiesList.value){
@@ -231,6 +231,7 @@ function purchaseBtnClicked() {
 }
 
 function resetBtnClicked() {
-    categoriesList.value = "select";
-    initActivitiesList();
+    purchaseTicketsForm.reset();
+    let purchaseMessage = document.getElementById("purchaseMessage");
+    purchaseMessage.innerHTML = "";
 }
